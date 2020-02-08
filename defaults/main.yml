@@ -1,7 +1,7 @@
 ---
 # defaults file for guacamole1.1.0
 
-guacamole_name: tits
+guacamole_name: guacamole
 guacamole_version: 1.1.0
 guacamole_mysql_root_password: PASSword1234
 guacamole_mysql_secure_installation: True
