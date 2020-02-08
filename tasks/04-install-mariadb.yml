@@ -17,7 +17,7 @@
   register: set_root_password
   failed_when: False
   changed_when: False
-
+  
 - name: MariaDB secure installation
-  include: mariadb-secure-installation.yml
+  include: 09-mysql-secure-installation.yml
   when: guacamole_mysql_secure_installation

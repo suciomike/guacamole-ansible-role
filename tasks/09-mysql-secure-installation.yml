@@ -5,20 +5,16 @@
   mysql_user:
     login_user: root
     login_password: '{{ guacamole_mysql_root_password }}'
-    user: ""
-    host: "{{ item }}"
+    name: ''
+    login_host: "localhost"
     state: absent
-  with_items:
-    - localhost
-    - "{{ ansible_fqdn }}"
 
-- name: Restrict root user access 
+- name: Remove root remote access 
   mysql_user:
     login_user: root
     login_password: '{{ guacamole_mysql_root_password }}'
     user: "root"
-    host: "{{ ansible_fqdn }}"
-    state: absent
+    host: "localhost"
 
 - name: Remove test database
   mysql_db:

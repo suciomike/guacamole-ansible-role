@@ -9,10 +9,14 @@
     state: started
     enabled: yes
 
-- name: Configure firewalld
+- name: open port 8080
   firewalld:
-    zone: public
     port: 8080/tcp
+    permanent: yes
     state: enabled
-    permanent: True
-    immediate: True
+
+- name: reload firewall
+  shell: firewall-cmd --reload
+
+
+
