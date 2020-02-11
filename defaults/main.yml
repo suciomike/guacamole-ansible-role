@@ -63,13 +63,6 @@ guacamole_packages:
   - "policycoreutils-python"
   - "MySQL-python"
 
-webapps:
-  - "docs"
-  - "examples"
-  - "host-manager"
-  - "manager"
-  - "ROOT"
-        
 
 
 guacamole_temp_path: /tmp/guactempdir
