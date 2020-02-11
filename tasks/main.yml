@@ -52,3 +52,8 @@
     path: '{{ guacamole_temp_path }}'
     state: absent
   changed_when: False
+
+- name: Enable SElinux
+  selinux:
+    policy: targeted
+    state: enforcing

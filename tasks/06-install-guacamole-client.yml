@@ -27,7 +27,8 @@
    recurse: yes
    owner: tomcat
    group: tomcat
-  
+   mode: '0700' 
+
 - name: Check if guacamole-auth-jdbc-mysql is installed
   stat:
     path: /etc/guacamole/extensions/guacamole-auth-jdbc-mysql-{{ guacamole_version }}.jar

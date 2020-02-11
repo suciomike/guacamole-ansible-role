@@ -14,13 +14,13 @@
 
 - name: Download Guacamole Server
   get_url:
-    url: http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/1.1.0/source/guacamole-server-1.1.0.tar.gz
+    url: http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/{{ guacamole_version }}/source/guacamole-server-{{ guacamole_version }}.tar.gz
     dest: '{{ guacamole_temp_path }}/server'
   when: server_is_installed.stat.exists == False
 
 - name: Extract guacamole server
   unarchive:
-    src: '{{ guacamole_temp_path }}/server/guacamole-server-1.1.0.tar.gz'
+    src: '{{ guacamole_temp_path }}/server/guacamole-server-{{ guacamole_version }}.tar.gz'
     dest: '{{ guacamole_temp_path }}/server/'
     remote_src: yes
   when: server_is_installed.stat.exists == False
@@ -29,7 +29,7 @@
 - name: Build from source and install guacamole server (1/2)
   shell: '{{ item }}'
   args:
-    chdir: '{{ guacamole_temp_path }}/server/guacamole-server-1.1.0'
+    chdir: '{{ guacamole_temp_path }}/server/guacamole-server-{{ guacamole_version }}'
     creates: /usr/local/sbin/guacd
   register: server_installed
   with_items: ["./configure --with-init-dir=/etc/init.d", "make", "make install" ]
