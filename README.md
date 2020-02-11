@@ -10,7 +10,7 @@ Requirements
 Installation
 ------------
 ```
-$ ansible-galaxy install suciomike.guacamole-ansible-role
+Clone the repo to your ansible roles folder and create a YML pointing to it.
 ```
 
 
