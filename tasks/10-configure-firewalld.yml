@@ -9,7 +9,7 @@
     state: started
     enabled: yes
 
-- name: open port 8080
+- name: open port
   firewalld:
     port: 8080/tcp
     permanent: yes
