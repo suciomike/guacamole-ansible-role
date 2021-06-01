@@ -1,5 +1,5 @@
 ---
-# defaults file for guacamole1.1.0
+# defaults file for guacamole1.3.0
 # Modify the name of the web link you prefer eg. www.myserver.com/guacamole
 guacamole_name: guacamole
 
@@ -22,7 +22,7 @@ guacamole_mysql_connector_java_version: "5.1.49"
 guacamole_configure_firewalld: True
 
 # Change to the latest version of Tomcat. 
-tomcat_version: "9.0.41"
+tomcat_version: "9.0.46"
 
 
 
